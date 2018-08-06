@@ -1,2 +1,0 @@
-# Seguirsoloeso
-Created with CodeSandbox
