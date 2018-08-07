@@ -1,14 +1,64 @@
 <html>
 
 <head>
-	<title>Parcel Sandbox</title>
+	<title>SEGUIR</title>
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i" rel="stylesheet">
 	<meta charset="UTF-8" />
+  <style>
+    .word{
+      
+font-family: 'Space Mono', monospace;
+      font-size: 100px;
+      font-style: italic
+    }
+  </style>
 </head>
 
 <body>
-	<div id="word"></div>
-
-	<script src="src/index.js"></script>
+	<div id="word" class="word"></div>
 </body>
+  
+  <script>
+  var words = [" seguir", " solo", " eso", ","];
+/*
+var getRandomWord = function () {
+    return words[Math.floor(Math.random() * words.length)];
+};
+
+var word = getRandomWord();
+word = word + " " + getRandomWord();
+word = word + " " + getRandomWord()
+word = word + " " + getRandomWord()*/
+
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+var arr = shuffle(words);
+//console.log(arr);
+var ngi = " ";
+
+arr.forEach(function(e) {
+ // console.log(e)
+  ngi += e;
+});
+document.getElementById("word").textContent = ngi;
+  </script>
 
 </html>
