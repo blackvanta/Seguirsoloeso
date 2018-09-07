@@ -49,7 +49,15 @@ function shuffle(array) {
 
   return array;
 }
+var arr = shuffle(words);
+var ngi = " ";
 
+arr.forEach(function(e) {
+ // console.log(e)
+  ngi += e;
+});
+document.getElementById("word").textContent = ngi;
+	  
   setInterval(function(){ 
   var arr = shuffle(words);
 var ngi = " ";
